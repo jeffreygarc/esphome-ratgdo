@@ -22,8 +22,7 @@ esphome:
   project:
     name: ratgdo.v32board_secplusv1
     version: "32.0"
-  platformio_options:
-      build_flags:
+  build_flags:
         - "-DRATGDO_NO_EMULATION"
 
 esp32:
