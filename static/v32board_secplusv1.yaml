@@ -11,19 +11,14 @@ substitutions:
   dry_contact_close_pin: GPIO14
   dry_contact_light_pin: GPIO27
 
-web_server:
-  local: true
-
 esphome:
   name: ${id_prefix}
   friendly_name: ${friendly_name}
   name_add_mac_suffix: true
   min_version: 2026.4.0
   project:
-    name: ratgdo.v32board_secplusv1
+    name: RATGDO.v32 Security+ 1
     version: "32.0"
-  build_flags:
-        - "-DRATGDO_NO_EMULATION"
 
 esp32:
   board: esp32dev
@@ -65,11 +60,6 @@ time:
 api:
   id: api_server
 
-improv_serial:
-
-esp32_improv:
-  authorizer: none
-
 wifi:
   ap:
     ssid: "ratgdo"
@@ -77,3 +67,4 @@ wifi:
 captive_portal:
 
 logger:
+  level: INFO
